@@ -6,7 +6,13 @@ pipeline {
         maven "maven3"
 	
     }
+    
+    environment {
 
+    	PATH = "C:\\WINDOWS\\SYSTEM32"
+
+    }
+	
     stages {
 		stage ('Test'){
 			steps{
