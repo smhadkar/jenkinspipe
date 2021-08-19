@@ -4,13 +4,14 @@ pipeline {
     tools {
         // Install the Maven version configured as "M3" and add it to the path.
         maven "maven3"
-	env.PATH = env.PATH + ";c:\\Windows\\System32"
+	
     }
 
     stages {
 		stage ('Test'){
 			steps{
 				input 'Do you want to proceed?'
+				env.PATH = env.PATH + ";c:\\Windows\\System32"
 			}
 		}
 	stage ('pre-build'){
