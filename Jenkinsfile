@@ -9,7 +9,6 @@ pipeline {
 
     stages {
 		stage ('Test'){
-			env.PATH = env.PATH + ";c:\\Windows\\System32"
 			steps{
 				input 'Do you want to proceed?'
 				
