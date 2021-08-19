@@ -9,6 +9,7 @@ pipeline {
 
     stages {
 		stage ('Test'){
+			env.PATH = env.PATH + ";c:\\Windows\\System32"
 			steps{
 				input 'Do you want to proceed?'
 				
@@ -30,8 +31,6 @@ pipeline {
 		}
 	
         stage('Build') {
-		env.PATH = env.PATH + ";c:\\Windows\\System32"
-
             steps {
                 // Get some code from a GitHub repository
                 git 'https://github.com/capgteam/bankapp.git'
